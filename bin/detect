@@ -10,6 +10,3 @@ else
   echo "no"
   exit 1
 fi
-
-echo "Ruby detect 2"
-echo $FAKECHROOT
