@@ -94,21 +94,49 @@ WARNING
     instrument 'ruby.compile' do
       # check for new app at the beginning of the compile
       new_app?
+      puts "Ruby - new_app?"
+      puts ENV['FAKECHROOT']
       Dir.chdir(build_path)
       remove_vendor_bundle
+      puts "Ruby - remove_vendor_bundle"
+      puts ENV['FAKECHROOT']
       warn_bundler_upgrade
+      puts "Ruby - warn_bundler_upgrade"
+      puts ENV['FAKECHROOT']
       install_ruby
+      puts "Ruby - install_ruby"
+      puts ENV['FAKECHROOT']
       install_jvm
+      puts "Ruby - install_jvm"
+      puts ENV['FAKECHROOT']
       setup_language_pack_environment
+      puts "Ruby - setup_language_pack_environment"
+      puts ENV['FAKECHROOT']
       setup_export
+      puts "Ruby - setup_export"
+      puts ENV['FAKECHROOT']
       setup_profiled
+      puts "Ruby - setup_profiled"
+      puts ENV['FAKECHROOT']
       allow_git do
         install_bundler_in_app
+        puts "Ruby - install_bundler_in_app"
+        puts ENV['FAKECHROOT']
         build_bundler("development:test")
+        puts "Ruby - build_bundler"
+        puts ENV['FAKECHROOT']
         post_bundler
+        puts "Ruby - post_bundler"
+        puts ENV['FAKECHROOT']
         create_database_yml
+        puts "Ruby - create_database_yml"
+        puts ENV['FAKECHROOT']
         install_binaries
+        puts "Ruby - install_binaries"
+        puts ENV['FAKECHROOT']
         run_assets_precompile_rake_task
+        puts "Ruby - run_assets_precompile_rake_task"
+        puts ENV['FAKECHROOT']
       end
       config_detect
       best_practice_warnings
