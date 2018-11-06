@@ -9,3 +9,5 @@ if [ -f "$1/Gemfile" ]; then
 else
   echo "no"
   exit 1
+fi
+
