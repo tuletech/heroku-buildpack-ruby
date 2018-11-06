@@ -1,6 +1,9 @@
 require "pathname"
 require 'benchmark'
 
+puts "LanguagePack"
+puts ENV['FAKECHROOT']
+
 # General Language Pack module
 module LanguagePack
   module Helpers
@@ -48,6 +51,3 @@ require "language_pack/rails41"
 require "language_pack/rails42"
 require "language_pack/rails5"
 require "language_pack/no_lockfile"
-
-puts "LanguagePack"
-puts ENV['FAKECHROOT']
