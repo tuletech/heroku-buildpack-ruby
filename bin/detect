@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Ruby detect"
+echo "Ruby detect 1"
 echo $FAKECHROOT
 
 if [ -f "$1/Gemfile" ]; then
@@ -10,3 +10,6 @@ else
   echo "no"
   exit 1
 fi
+
+echo "Ruby detect 2"
+echo $FAKECHROOT

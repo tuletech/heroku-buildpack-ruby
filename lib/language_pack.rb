@@ -1,9 +1,6 @@
 require "pathname"
 require 'benchmark'
 
-puts "LanguagePack"
-puts ENV['FAKECHROOT']
-
 # General Language Pack module
 module LanguagePack
   module Helpers
