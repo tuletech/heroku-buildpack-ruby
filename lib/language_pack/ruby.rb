@@ -89,6 +89,8 @@ WARNING
   end
 
   def compile
+    puts "Ruby - compile"
+    puts ENV['FAKECHROOT']
     instrument 'ruby.compile' do
       # check for new app at the beginning of the compile
       new_app?

@@ -105,6 +105,8 @@ class LanguagePack::Helpers::RailsRunner
 
   private
     def call
+      puts "RailsRunner - call"
+      puts ENV['FAKECHROOT']
       topic("Detecting rails configuration")
       puts "$ #{command}" if @debug
       out = execute_command!
