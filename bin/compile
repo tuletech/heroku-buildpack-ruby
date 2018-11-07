@@ -1,10 +1,11 @@
 #!/bin/bash
 # The actual `bin/compile` code lives in `bin/support/ruby_compile`. This file
 # instead bootstraps the ruby needed and then executes `bin/support/ruby_compile`
-echo "Ruby compile"
-echo $FAKECHROOT
 BIN_DIR=$(cd $(dirname $0); pwd)
 BUILDPACK_DIR=$(dirname $BIN_DIR)
+
+echo "BUILDPACK_DIR: $BUILDPACK_DIR"
+echo "BUILD_DIR: $BUILD_DIR"
 
 source "$BIN_DIR/support/bash_functions.sh"
 heroku_buildpack_ruby_install_ruby "$BIN_DIR" "$BUILDPACK_DIR"
