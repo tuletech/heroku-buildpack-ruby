@@ -4,9 +4,6 @@
 BIN_DIR=$(cd $(dirname $0); pwd)
 BUILDPACK_DIR=$(dirname $BIN_DIR)
 
-echo "BUILDPACK_DIR: $BUILDPACK_DIR"
-echo "BUILD_DIR: $1"
-
 source "$BIN_DIR/support/bash_functions.sh"
 heroku_buildpack_ruby_install_ruby "$BIN_DIR" "$BUILDPACK_DIR"
 
