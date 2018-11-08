@@ -113,6 +113,9 @@ class LanguagePack::Helpers::RailsRunner
     end
 
     def execute_command!
+      puts `pwd`
+      puts `ls`
+
       process = ProcessSpawn.new(command,
         user_env: true,
         timeout:  @timeout_val,

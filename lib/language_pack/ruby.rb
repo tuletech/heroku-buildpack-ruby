@@ -108,8 +108,6 @@ WARNING
         install_binaries
         run_assets_precompile_rake_task
       end
-      puts `pwd`
-      puts `ls`
       config_detect
       best_practice_warnings
       cleanup
